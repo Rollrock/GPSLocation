@@ -7,6 +7,8 @@
 //
 
 #import "DSLocationViewController.h"
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
 
 #define DAY_1_STATE  @"day_1_state"
 #define DAY_2_STATE  @"day_2_state"
@@ -22,7 +24,10 @@
 #define LOWPOWER    @"lowpower"
 
 
-@interface DSLocationViewController ()
+#define PHONE_NUM  @"phone_num"
+
+
+@interface DSLocationViewController ()<ASIHTTPRequestDelegate>
 {
 
     int _timeInterval;
@@ -38,8 +43,10 @@
 - (IBAction)intervalClicked:(id)sender;
 
 - (IBAction)saveClicked:(id)sender;
+- (IBAction)phoneNumValueChanged:(id)sender;
 
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *_intervalSeg;
 
 @property (weak, nonatomic) IBOutlet UIButton *_day_1;
 @property (weak, nonatomic) IBOutlet UIButton *_day_2;
@@ -105,7 +112,20 @@
     
     val = [self ReadSetting:DAY_7_STATE];
     [self initDays:val forBtn:self._day_7];
-
+    
+    //
+    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+    
+    NSString * strPhone = [def stringForKey:PHONE_NUM];
+    [self._phoneTextField setText:strPhone];
+    
+    //
+    val = [def integerForKey:TIME_INTERVAL];
+    [self._intervalSeg setSelectedSegmentIndex:val];
+    
+    //
+    
+    
 }
 
 
@@ -142,6 +162,7 @@
     
     [def synchronize];
 }
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -269,13 +290,27 @@
             _timeInterval = 60;
             break;
     }
+    
+    [self WriteSetting:TIME_INTERVAL byValue:index];
 }
 
 - (IBAction)saveClicked:(id)sender {
     
+    [self sentValueToServer];
+}
+
+- (IBAction)phoneNumValueChanged:(id)sender {
     
+    UITextField * text = (UITextField*)sender;
+    
+    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+    [def setValue:text.text forKey:PHONE_NUM];
+    [def synchronize];
+    
+    NSLog(@"phoneNum:%@",text.text);
     
 }
+
 
 -(void)hideKeypad
 {
@@ -287,4 +322,59 @@
     [self._forthTime resignFirstResponder];
 }
 
+
+-(void)sentValueToServer
+{
+    NSURL * url = [NSURL URLWithString:@"http://www.999dh.net/GpsLocation/request.php"];
+    ASIFormDataRequest * req = [ASIFormDataRequest requestWithURL:url];
+    req.delegate = self;
+    
+    [req setPostValue:@"Rollrock" forKey:@"name"];
+    [req setPostValue:@"28" forKey:@"age"];
+    
+    [req startSynchronous];
+}
+
+-(void)requestFinished:(ASIHTTPRequest *)request
+{
+    NSString * resStr = [request responseString];
+    NSData * data = [request responseData];
+    
+    NSLog(@"resStr:%@",resStr);
+}
+
+-(void)requestFailed:(ASIHTTPRequest *)request
+{
+    NSError *error = [request error];
+    
+    NSLog(@"error:%@",error);
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

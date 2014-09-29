@@ -15,6 +15,7 @@
                 <outlet property="_day_7" destination="TL9-Tb-YPb" id="K1k-lc-kWT"/>
                 <outlet property="_firstTime" destination="nnn-bf-qKM" id="uc6-sh-08g"/>
                 <outlet property="_forthTime" destination="8Bn-8l-jZG" id="jx4-B6-9Ke"/>
+                <outlet property="_intervalSeg" destination="Sjq-IF-Rgb" id="Dwo-T8-Jsw"/>
                 <outlet property="_phoneTextField" destination="U2W-vb-e0y" id="FPK-yO-Pg3"/>
                 <outlet property="_secondTime" destination="OLb-CH-ldN" id="BZn-aI-N3H"/>
                 <outlet property="_thirdTime" destination="rEF-dw-nN7" id="3dk-hP-057"/>
@@ -86,12 +87,6 @@
                         <action selector="intervalClicked:" destination="-1" eventType="valueChanged" id="9fg-J3-ywK"/>
                     </connections>
                 </segmentedControl>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" id="U2W-vb-e0y">
-                    <rect key="frame" x="100" y="70" width="150" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
-                </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话号码:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="laH-cV-3Sy">
                     <rect key="frame" x="20" y="74" width="77" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -285,7 +280,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1u2-5f-Yxt">
-                    <rect key="frame" x="105" y="520" width="100" height="30"/>
+                    <rect key="frame" x="110" y="520" width="100" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.5440204766079666" green="1" blue="0.5702297151857636" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -296,6 +291,15 @@
                         <action selector="saveClicked:" destination="-1" eventType="touchUpInside" id="AGK-mt-Q1M"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" id="U2W-vb-e0y">
+                    <rect key="frame" x="100" y="70" width="150" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                    <connections>
+                        <action selector="phoneNumValueChanged:" destination="-1" eventType="editingDidEnd" id="L2K-Fq-RS9"/>
+                    </connections>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="5" y="113"/>
