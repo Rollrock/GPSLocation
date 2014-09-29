@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E2365503-C28F-400F-846E-4257949E325E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GPSLocation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7490FCDD0911338D556BE59CB0D1EFFB28CE9860</key>
+		<string>https://github.com/Rollrock/GPSLocation.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GPSLocation.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7490FCDD0911338D556BE59CB0D1EFFB28CE9860</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Rollrock/GPSLocation.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7490FCDD0911338D556BE59CB0D1EFFB28CE9860</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7490FCDD0911338D556BE59CB0D1EFFB28CE9860</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GPSLocation</string>
+		</dict>
+	</array>
+</dict>
+</plist>
