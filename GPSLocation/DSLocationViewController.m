@@ -23,6 +23,11 @@
 #define BACKGROUND  @"background"
 #define LOWPOWER    @"lowpower"
 
+#define FIRST_TIME @"first_time"
+#define SECOND_TIME @"second_time"
+#define THIRD_TIME @"third_time"
+#define FORTH_TIME @"forth_time"
+
 
 #define PHONE_NUM  @"phone_num"
 
@@ -44,6 +49,7 @@
 
 - (IBAction)saveClicked:(id)sender;
 - (IBAction)phoneNumValueChanged:(id)sender;
+- (IBAction)timeChanged:(id)sender;
 
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *_intervalSeg;
@@ -124,8 +130,25 @@
     [self._intervalSeg setSelectedSegmentIndex:val];
     
     //
+    val = [def integerForKey:FIRST_TIME];
+    [self._firstTime setText:[NSString stringWithFormat:@"%d",val]];
     
+    val = [def integerForKey:SECOND_TIME];
+    [self._secondTime setText:[NSString stringWithFormat:@"%d",val]];
     
+    val = [def integerForKey:THIRD_TIME];
+    [self._thirdTime setText:[NSString stringWithFormat:@"%d",val]];
+    
+    val = [def integerForKey:FORTH_TIME];
+    [self._forthTime setText:[NSString stringWithFormat:@"%d",val]];
+    
+    //
+    
+    val = [def integerForKey:BACKGROUND];
+    [self.background setOn:val];
+    
+    val = [def integerForKey:LOWPOWER];
+    [self.lowPower setOn:val];
 }
 
 
@@ -170,15 +193,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)dayClicked:(id)sender {
     
@@ -250,6 +264,8 @@
     
     NSLog(@"isOn:%d",isON);
     
+    [self WriteSetting:LOWPOWER byValue:isON];
+    
 }
 
 - (IBAction)backgroundChanged:(id)sender {
@@ -259,6 +275,8 @@
     BOOL isON = [sw isOn];
     
     NSLog(@"isOn:%d",isON);
+    
+    [self WriteSetting:BACKGROUND byValue:isON];
 
 }
 
@@ -311,6 +329,31 @@
     
 }
 
+- (IBAction)timeChanged:(id)sender {
+    
+    UITextField * text = (UITextField * )sender;
+    
+    if( text == self._firstTime )
+    {
+        [self WriteSetting:FIRST_TIME byValue:[text.text integerValue]];
+    }
+    else if( text == self._secondTime )
+    {
+        [self WriteSetting:SECOND_TIME byValue:[text.text integerValue]];
+    }
+    else if( text == self._thirdTime )
+    {
+        [self WriteSetting:THIRD_TIME byValue:[text.text integerValue]];
+    }
+    else if( text == self._forthTime )
+    {
+        [self WriteSetting:FORTH_TIME byValue:[text.text integerValue]];
+    }
+}
+
+
+
+
 
 -(void)hideKeypad
 {
@@ -329,8 +372,34 @@
     ASIFormDataRequest * req = [ASIFormDataRequest requestWithURL:url];
     req.delegate = self;
     
-    [req setPostValue:@"Rollrock" forKey:@"name"];
-    [req setPostValue:@"28" forKey:@"age"];
+    
+    
+    ///
+    int days = 0;
+    days += [self ReadSetting:DAY_1_STATE]<<1;
+    days += [self ReadSetting:DAY_2_STATE]<<2;
+    days += [self ReadSetting:DAY_3_STATE]<<3;
+    days += [self ReadSetting:DAY_4_STATE]<<4;
+    days += [self ReadSetting:DAY_5_STATE]<<5;
+    days += [self ReadSetting:DAY_6_STATE]<<6;
+    days += [self ReadSetting:DAY_7_STATE]<<7;
+    
+    [req setPostValue:self._phoneTextField.text forKey:@"phoneNum"];
+    
+    [req setPostValue:self._firstTime.text forKey:@"time1"];
+    [req setPostValue:self._secondTime.text forKey:@"time2"];
+    [req setPostValue:self._thirdTime.text forKey:@"time3"];
+    [req setPostValue:self._forthTime.text forKey:@"time4"];
+    
+    [req setPostValue:[NSString stringWithFormat:@"%d",days] forKey:@"days"];
+    
+    [req setPostValue:[NSString stringWithFormat:@"%d",_timeInterval] forKey:@"interval"];
+    
+    [req setPostValue:[NSString stringWithFormat:@"%d", [self.background isOn]] forKey:@"background"];
+    [req setPostValue:[NSString stringWithFormat:@"%d",[self.lowPower isOn]] forKey:@"lowpower"];
+    
+    [req setPostValue:@"OK" forKey:@"status"];
+    
     
     [req startSynchronous];
 }
