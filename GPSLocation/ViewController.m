@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "DSLocationViewController.h"
+#import "SSLocationViewController.h"
+#import "DSHistoryViewController.h"
 
 @interface ViewController ()
 {
@@ -19,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *_settingBtn;
 
 - (IBAction)DSLocationClicked;
+- (IBAction)SSLocationClicked:(id)sender;
+- (IBAction)DSHistoryClicked;
 
 @end
 
@@ -65,5 +69,18 @@
     DSLocationViewController * vc = [[DSLocationViewController alloc]initWithNibName:@"DSLocationViewController" bundle:nil];
     [self presentViewController:vc animated:YES completion:nil];
     
+}
+
+- (IBAction)SSLocationClicked:(id)sender {
+    
+    SSLocationViewController * vc = [[SSLocationViewController alloc]initWithNibName:nil bundle:nil];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (IBAction)DSHistoryClicked {
+    
+    DSHistoryViewController * vc = [[DSHistoryViewController alloc]initWithNibName:nil bundle:nil];
+    
+    [self presentViewController:vc animated:YES completion:nil];
 }
 @end

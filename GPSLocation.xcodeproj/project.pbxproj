@@ -39,6 +39,9 @@
 		482B8BE519D4717600FDC224 /* round_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BE019D4717600FDC224 /* round_3.png */; };
 		482B8BE619D4717600FDC224 /* round_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BE119D4717600FDC224 /* round_4.png */; };
 		482B8BE719D4717600FDC224 /* round_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BE219D4717600FDC224 /* round_5.png */; };
+		4838059F19DCF301003C283A /* RockWaitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4838059E19DCF301003C283A /* RockWaitView.m */; };
+		483805A619DD8C52003C283A /* DSHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805A419DD8C52003C283A /* DSHistoryViewController.m */; };
+		483805A719DD8C52003C283A /* DSHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483805A519DD8C52003C283A /* DSHistoryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,11 @@
 		482B8BE019D4717600FDC224 /* round_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_3.png; sourceTree = "<group>"; };
 		482B8BE119D4717600FDC224 /* round_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_4.png; sourceTree = "<group>"; };
 		482B8BE219D4717600FDC224 /* round_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_5.png; sourceTree = "<group>"; };
+		4838059D19DCF301003C283A /* RockWaitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockWaitView.h; sourceTree = "<group>"; };
+		4838059E19DCF301003C283A /* RockWaitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RockWaitView.m; sourceTree = "<group>"; };
+		483805A319DD8C52003C283A /* DSHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHistoryViewController.h; sourceTree = "<group>"; };
+		483805A419DD8C52003C283A /* DSHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHistoryViewController.m; sourceTree = "<group>"; };
+		483805A519DD8C52003C283A /* DSHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHistoryViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,8 @@
 		482B8BB519D4702C00FDC224 /* GPSLocation */ = {
 			isa = PBXGroup;
 			children = (
+				4838059D19DCF301003C283A /* RockWaitView.h */,
+				4838059E19DCF301003C283A /* RockWaitView.m */,
 				481E0D8719D993BD00FFEE91 /* 3rd */,
 				482B8BBA19D4702C00FDC224 /* AppDelegate.h */,
 				482B8BBB19D4702C00FDC224 /* AppDelegate.m */,
@@ -212,6 +222,9 @@
 				482B8BB619D4702C00FDC224 /* Supporting Files */,
 				481E0D7619D83E5C00FFEE91 /* SSLocationViewController.h */,
 				481E0D7719D83E5C00FFEE91 /* SSLocationViewController.m */,
+				483805A319DD8C52003C283A /* DSHistoryViewController.h */,
+				483805A419DD8C52003C283A /* DSHistoryViewController.m */,
+				483805A519DD8C52003C283A /* DSHistoryViewController.xib */,
 				481E0D7C19D83F2E00FFEE91 /* DSLocationViewController.h */,
 				481E0D7D19D83F2E00FFEE91 /* DSLocationViewController.m */,
 				481E0D7E19D83F2E00FFEE91 /* DSLocationViewController.xib */,
@@ -350,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483805A719DD8C52003C283A /* DSHistoryViewController.xib in Resources */,
 				482B8BC219D4702D00FDC224 /* Main.storyboard in Resources */,
 				482B8BC719D4702D00FDC224 /* LaunchScreen.xib in Resources */,
 				481E0D8519D9864900FFEE91 /* day_select.png in Resources */,
@@ -386,10 +400,12 @@
 				482B8BB919D4702C00FDC224 /* main.m in Sources */,
 				481E0E2319D996D100FFEE91 /* ASIHTTPRequest.m in Sources */,
 				481E0E2219D996D100FFEE91 /* ASIFormDataRequest.m in Sources */,
+				4838059F19DCF301003C283A /* RockWaitView.m in Sources */,
 				481E0E2119D996D100FFEE91 /* ASIDownloadCache.m in Sources */,
 				481E0E2419D996D100FFEE91 /* ASIInputStream.m in Sources */,
 				481E0E2019D996D100FFEE91 /* ASIDataDecompressor.m in Sources */,
 				481E0E2919D9977600FFEE91 /* Reachability.m in Sources */,
+				483805A619DD8C52003C283A /* DSHistoryViewController.m in Sources */,
 				481E0E2519D996D100FFEE91 /* ASINetworkQueue.m in Sources */,
 				481E0D7819D83E5C00FFEE91 /* SSLocationViewController.m in Sources */,
 				481E0D7F19D83F2E00FFEE91 /* DSLocationViewController.m in Sources */,

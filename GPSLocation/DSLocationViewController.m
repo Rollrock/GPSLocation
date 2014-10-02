@@ -9,6 +9,7 @@
 #import "DSLocationViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
+#import "RockWaitView.h"
 
 #define DAY_1_STATE  @"day_1_state"
 #define DAY_2_STATE  @"day_2_state"
@@ -35,6 +36,8 @@
 @interface DSLocationViewController ()<ASIHTTPRequestDelegate>
 {
 
+    RockWaitView * _waitView;
+    
     int _timeInterval;
 
 }
@@ -314,7 +317,11 @@
 
 - (IBAction)saveClicked:(id)sender {
     
+    _waitView = [[RockWaitView alloc]initWithParentView:self.view withStr:@"等待中,请稍后"];
+    
+    
     [self sentValueToServer];
+   
 }
 
 - (IBAction)phoneNumValueChanged:(id)sender {
@@ -352,9 +359,6 @@
 }
 
 
-
-
-
 -(void)hideKeypad
 {
     [self._phoneTextField resignFirstResponder];
@@ -371,8 +375,6 @@
     NSURL * url = [NSURL URLWithString:@"http://www.999dh.net/GpsLocation/request.php"];
     ASIFormDataRequest * req = [ASIFormDataRequest requestWithURL:url];
     req.delegate = self;
-    
-    
     
     ///
     int days = 0;
@@ -410,6 +412,9 @@
     NSData * data = [request responseData];
     
     NSLog(@"resStr:%@",resStr);
+    
+
+    [_waitView dismiss];
 }
 
 -(void)requestFailed:(ASIHTTPRequest *)request
@@ -417,6 +422,8 @@
     NSError *error = [request error];
     
     NSLog(@"error:%@",error);
+    
+    [_waitView dismiss];
 }
 
 @end
