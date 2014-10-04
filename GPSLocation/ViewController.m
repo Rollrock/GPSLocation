@@ -10,6 +10,7 @@
 #import "DSLocationViewController.h"
 #import "SSLocationViewController.h"
 #import "DSHistoryViewController.h"
+#import "AboutViewController.h"
 
 @interface ViewController ()
 {
@@ -23,6 +24,7 @@
 - (IBAction)DSLocationClicked;
 - (IBAction)SSLocationClicked:(id)sender;
 - (IBAction)DSHistoryClicked;
+- (IBAction)AboutClicked:(id)sender;
 
 @end
 
@@ -81,6 +83,12 @@
     
     DSHistoryViewController * vc = [[DSHistoryViewController alloc]initWithNibName:nil bundle:nil];
     
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (IBAction)AboutClicked:(id)sender {
+    
+    AboutViewController * vc = [[AboutViewController alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
 }
 @end

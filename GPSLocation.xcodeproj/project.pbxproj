@@ -42,6 +42,9 @@
 		4838059F19DCF301003C283A /* RockWaitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4838059E19DCF301003C283A /* RockWaitView.m */; };
 		483805A619DD8C52003C283A /* DSHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805A419DD8C52003C283A /* DSHistoryViewController.m */; };
 		483805A719DD8C52003C283A /* DSHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483805A519DD8C52003C283A /* DSHistoryViewController.xib */; };
+		483805AA19DD974F003C283A /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805A919DD974F003C283A /* HistoryViewController.m */; };
+		483805AE19DD981C003C283A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805AC19DD981C003C283A /* AboutViewController.m */; };
+		483805AF19DD981C003C283A /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483805AD19DD981C003C283A /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,11 @@
 		483805A319DD8C52003C283A /* DSHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHistoryViewController.h; sourceTree = "<group>"; };
 		483805A419DD8C52003C283A /* DSHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHistoryViewController.m; sourceTree = "<group>"; };
 		483805A519DD8C52003C283A /* DSHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHistoryViewController.xib; sourceTree = "<group>"; };
+		483805A819DD974F003C283A /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		483805A919DD974F003C283A /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		483805AB19DD981C003C283A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		483805AC19DD981C003C283A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		483805AD19DD981C003C283A /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,11 @@
 				482B8BB619D4702C00FDC224 /* Supporting Files */,
 				481E0D7619D83E5C00FFEE91 /* SSLocationViewController.h */,
 				481E0D7719D83E5C00FFEE91 /* SSLocationViewController.m */,
+				483805AB19DD981C003C283A /* AboutViewController.h */,
+				483805AC19DD981C003C283A /* AboutViewController.m */,
+				483805AD19DD981C003C283A /* AboutViewController.xib */,
+				483805A819DD974F003C283A /* HistoryViewController.h */,
+				483805A919DD974F003C283A /* HistoryViewController.m */,
 				483805A319DD8C52003C283A /* DSHistoryViewController.h */,
 				483805A419DD8C52003C283A /* DSHistoryViewController.m */,
 				483805A519DD8C52003C283A /* DSHistoryViewController.xib */,
@@ -371,6 +384,7 @@
 				482B8BE419D4717600FDC224 /* round_2.png in Resources */,
 				482B8BE319D4717600FDC224 /* round_1.png in Resources */,
 				482B8BE619D4717600FDC224 /* round_4.png in Resources */,
+				483805AF19DD981C003C283A /* AboutViewController.xib in Resources */,
 				481E0D8219D841C900FFEE91 /* back.png in Resources */,
 				481E0D8019D83F2E00FFEE91 /* DSLocationViewController.xib in Resources */,
 				482B8BE519D4717600FDC224 /* round_3.png in Resources */,
@@ -393,11 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483805AE19DD981C003C283A /* AboutViewController.m in Sources */,
 				482B8BBF19D4702C00FDC224 /* ViewController.m in Sources */,
 				481E0E1E19D996D100FFEE91 /* ASIAuthenticationDialog.m in Sources */,
 				481E0E1F19D996D100FFEE91 /* ASIDataCompressor.m in Sources */,
 				482B8BBC19D4702C00FDC224 /* AppDelegate.m in Sources */,
 				482B8BB919D4702C00FDC224 /* main.m in Sources */,
+				483805AA19DD974F003C283A /* HistoryViewController.m in Sources */,
 				481E0E2319D996D100FFEE91 /* ASIHTTPRequest.m in Sources */,
 				481E0E2219D996D100FFEE91 /* ASIFormDataRequest.m in Sources */,
 				4838059F19DCF301003C283A /* RockWaitView.m in Sources */,
