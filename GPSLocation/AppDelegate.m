@@ -15,8 +15,115 @@
 @implementation AppDelegate
 
 
+
+-(void)initPhoneInfo
+{
+    NSString * path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/"] stringByAppendingString:@"Mobile.txt"];
+    NSString * strTemp = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    _phoneArray = [strTemp componentsSeparatedByString:@"\n"];
+
+}
+
+-(void)getPhoneInfo:(NSString*)strPhone withLabel:(UILabel*)lab
+{
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^(void){
+        
+        if( [strPhone length] == 7 )
+        {
+            for( NSString * str in _phoneArray )
+            {
+                NSString * strFind = [strPhone substringWithRange:NSMakeRange(0, 7)];
+                
+                NSString * strCmp = [str substringWithRange:NSMakeRange(0, 7)];
+                
+                if( NSOrderedSame == [strFind compare:strCmp] )
+                {
+                    NSString * strOut = [str substringFromIndex:8];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^(void){
+                       
+                        lab.text = strOut;
+                    });
+                    
+                    
+                    break;
+                }
+            }
+        }
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(), ^(void){
+                
+                lab.text = @"请确认输入的号码是否正确!";
+            });
+        }
+        
+    });
+    
+}
+
+-(NSString*)getPhoneInfo:(NSString*)strPhone
+{
+    //
+    
+    __block NSString * strRet;
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^(void){
+        
+        if( [strPhone length] == 7 )
+        {
+            for( NSString * str in _phoneArray )
+            {
+                NSString * strFind = [strPhone substringWithRange:NSMakeRange(0, 7)];
+                
+                NSString * strCmp = [str substringWithRange:NSMakeRange(0, 7)];
+                
+                if( NSOrderedSame == [strFind compare:strCmp] )
+                {
+                    NSString * strOut = [str substringFromIndex:8];
+                    strRet =   strOut;
+                    break;
+                }
+            }
+        }
+        
+        strRet =   @"请确认输入的号码是否正确!";
+        
+    });
+    
+    return strRet;
+    
+    /*
+    if( [strPhone length] == 7 )
+    {
+        for( NSString * str in _phoneArray )
+        {
+            NSString * strFind = [strPhone substringWithRange:NSMakeRange(0, 7)];
+            
+            NSString * strCmp = [str substringWithRange:NSMakeRange(0, 7)];
+            
+            if( NSOrderedSame == [strFind compare:strCmp] )
+            {
+                NSString * strOut = [str substringFromIndex:8];
+                return  strOut;
+            }
+        }
+    }
+    
+    return  @"请确认输入的号码是否正确!";
+     
+     */
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    [self initPhoneInfo];
+    
     return YES;
 }
 

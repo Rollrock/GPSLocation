@@ -9,9 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    NSArray * _phoneArray;
+}
 @property (strong, nonatomic) UIWindow *window;
 
+
+
+
+-(NSString*)getPhoneInfo:(NSString*)strPhone;
+-(void)getPhoneInfo:(NSString*)strPhone withLabel:(UILabel*)lab;
 
 @end
 

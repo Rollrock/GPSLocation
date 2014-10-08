@@ -8,10 +8,12 @@
 
 #import "DSHistoryViewController.h"
 #import "HistoryViewController.h"
+#import "AppDelegate.h"
 
 @interface DSHistoryViewController ()
 
 
+@property (weak, nonatomic) IBOutlet UILabel *_phoneInfo;
 @property (weak, nonatomic) IBOutlet UITextField *_phoneTextField;
 @property (weak, nonatomic) IBOutlet UIButton *_backBtn;
 
@@ -21,6 +23,7 @@
 
 - (IBAction)backClicked;
 
+- (IBAction)phoneNumChanged:(id)sender;
 
 - (IBAction)_history1Clicked:(id)sender;
 
@@ -68,6 +71,27 @@
     [self hideKeyboard];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (IBAction)phoneNumChanged:(id)sender {
+    
+    UITextField * field =(UITextField*)sender;
+    
+    if( [field.text length] >= 7 )
+    {
+        NSString * str = [field.text substringToIndex:7];
+        
+        AppDelegate * AppDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        self._phoneInfo.text = [AppDel getPhoneInfo:str];
+        
+        NSLog(@"_info:%@",self._phoneInfo.text);
+    }
+    else
+    {
+        self._phoneInfo.text = @"";
+    }
+
     
 }
 

@@ -26,17 +26,17 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Osw-DO-JMW">
-                    <rect key="frame" x="20" y="122" width="268" height="184"/>
+                    <rect key="frame" x="26" y="325" width="268" height="165"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="邮箱:  zhuangchaoxiao@163.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wD-j2-D3H">
-                            <rect key="frame" x="4" y="104" width="260" height="21"/>
+                            <rect key="frame" x="4" y="99" width="260" height="21"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作者:     小土豆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-fk-qtC">
-                            <rect key="frame" x="53" y="48" width="162" height="21"/>
+                            <rect key="frame" x="53" y="41" width="162" height="21"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -45,6 +45,20 @@
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PO-Mi-f4h">
+                    <rect key="frame" x="33" y="78" width="254" height="232"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">			 使用条约
+
+1.实时定位:对允许定位的手机号码进行当前位置的定位，精确度在5-10米左右。
+2.定时定位：可以设置定位的时间、周期、定位频率。
+3.省电模式：开启省电模式之后，定位处于低能耗模式，不会影响定位精度。
+4.后台定位：开启后台定位，使手机在待机状态下（屏幕暗）也可以定位。
+5.历史轨迹：回放不同时间断被定位手机的运动轨迹。
+6.被定位的手机号码需要在其手机上设置为同意被定位方可使用。</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="336" y="260"/>

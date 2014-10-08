@@ -317,8 +317,17 @@
 
 - (IBAction)saveClicked:(id)sender {
     
-    _waitView = [[RockWaitView alloc]initWithParentView:self.view withStr:@"等待中,请稍后"];
     
+    if( [self._phoneTextField.text length] < 11 )
+    {
+        UIAlertView * alter = [[UIAlertView alloc]initWithTitle:@"错误" message:@"您输入的号码不正确！" delegate:self cancelButtonTitle:@"缺点" otherButtonTitles:nil, nil];
+        
+        [alter show];
+        
+        return;
+    }
+    
+    _waitView = [[RockWaitView alloc]initWithParentView:self.view withStr:@"等待中,请稍后"];
     
     [self sentValueToServer];
    
