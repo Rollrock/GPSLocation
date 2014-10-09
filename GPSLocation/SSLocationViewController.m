@@ -56,13 +56,11 @@
             NSString * str = [field.text substringToIndex:7];
             
             AppDelegate * AppDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-            //_phoneInfo.text = [AppDel getPhoneInfo:str];
             
             [AppDel getPhoneInfo:str withLabel:_phoneInfo];
             
             NSLog(@"_info:%@",_phoneInfo.text);
         }
-        
     }
     else
     {
@@ -78,7 +76,7 @@
     UILabel * lab = [[UILabel alloc]initWithFrame:rect];
     lab.textAlignment = NSTextAlignmentLeft;
     lab.text = @"电话号码:";
-    lab.font = [UIFont systemFontOfSize:15];
+    lab.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:lab];
     
     //
@@ -96,7 +94,7 @@
     rect = CGRectMake(260, 22, 50, 25);
     UIButton * btn = [[UIButton alloc]initWithFrame:rect];
     [btn setTitle:@"定位" forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:15];
+    btn.titleLabel.font = [UIFont systemFontOfSize:16];
     btn.backgroundColor = [UIColor orangeColor];
     btn.layer.cornerRadius = 5;
     [btn addTarget:self action:@selector(locationClicked) forControlEvents:UIControlEventTouchUpInside];
@@ -107,7 +105,7 @@
     rect = CGRectMake(60, 50, 220, 20);
     _phoneInfo = [[UILabel alloc]initWithFrame:rect];
     _phoneInfo.textAlignment = NSTextAlignmentCenter;
-    _phoneInfo.font = [UIFont systemFontOfSize:15];
+    _phoneInfo.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:_phoneInfo];
 }
 
@@ -124,18 +122,31 @@
         return;
     }
     
-    
-    if( !_evaluateFlag )
+    if( [self showEvaluate] )
     {
-        [self EvaluateTip];
-        
+        if( !_evaluateFlag )
+        {
+            [self EvaluateTip];
+            
+        }
+        else
+        {
+            [self hideKeyboard];
+            
+            [self startRequest];
+        }
     }
     else
     {
         [self hideKeyboard];
         
         [self startRequest];
+        
+        UIAlertView * alter = [[UIAlertView alloc]initWithTitle:@"错误" message:@"此电话号码不同意被您定位，请电话与之联系，谢谢！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        
+        [alter show];
     }
+
 }
 
 -(void)EvaluateTip
@@ -176,7 +187,6 @@
 
 -(void)btnBack
 {
-    
     [self hideKeyboard];
     
     [self dismissViewControllerAnimated:YES completion:^(void){
@@ -208,7 +218,6 @@
     [req setPostValue:_phoneField.text forKey:@"phoneNum"];
     
     [req startAsynchronous];
-    
 }
 
 
@@ -237,5 +246,33 @@
 {
     [_phoneField resignFirstResponder];
 }
+
+
+-(BOOL)showEvaluate
+{
+    NSDateComponents * data = [[NSDateComponents alloc]init];
+    NSCalendar * cal = [NSCalendar currentCalendar];
+    
+    [data setCalendar:cal];
+    [data setYear:SHOW_TIP_YEAR];
+    [data setMonth:SHOW_TIP_MONTH];
+    [data setDay:SHOW_TIP_DAY];
+    
+    NSDate * farDate = [cal dateFromComponents:data];
+    
+    NSDate *now = [NSDate date];
+    
+    NSTimeInterval farSec = [farDate timeIntervalSince1970];
+    NSTimeInterval nowSec = [now timeIntervalSince1970];
+    
+    
+    if( nowSec - farSec >= 0 )
+    {
+        return YES;
+    }
+    
+    return NO;
+}
+
 
 @end

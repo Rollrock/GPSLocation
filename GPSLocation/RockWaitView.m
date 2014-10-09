@@ -59,7 +59,7 @@
         _strLab.backgroundColor = [UIColor clearColor];
         _strLab.text = waitStr;
         _strLab.textAlignment = NSTextAlignmentCenter;
-        _strLab.font = [UIFont systemFontOfSize:8];
+        _strLab.font = [UIFont systemFontOfSize:12];
         
         _strLab.frame = CGRectMake(0, 0, 80, 20);
         _strLab.center = CGPointMake(self.center.x, self.center.y + 30);

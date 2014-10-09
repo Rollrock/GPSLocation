@@ -83,7 +83,8 @@
         NSString * str = [field.text substringToIndex:7];
         
         AppDelegate * AppDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-        self._phoneInfo.text = [AppDel getPhoneInfo:str];
+
+        [AppDel getPhoneInfo:str withLabel:self._phoneInfo];
         
         NSLog(@"_info:%@",self._phoneInfo.text);
     }

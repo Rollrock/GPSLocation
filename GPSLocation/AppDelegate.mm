@@ -95,32 +95,16 @@
     
     return strRet;
     
-    /*
-    if( [strPhone length] == 7 )
-    {
-        for( NSString * str in _phoneArray )
-        {
-            NSString * strFind = [strPhone substringWithRange:NSMakeRange(0, 7)];
-            
-            NSString * strCmp = [str substringWithRange:NSMakeRange(0, 7)];
-            
-            if( NSOrderedSame == [strFind compare:strCmp] )
-            {
-                NSString * strOut = [str substringFromIndex:8];
-                return  strOut;
-            }
-        }
-    }
-    
-    return  @"请确认输入的号码是否正确!";
-     
-     */
 }
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+   // _mapManager = [[BMKMapManager alloc]init];
+    
+    //BOOL ret = [_mapManager start:@"XrFj3o8SaezTdPec5xb9Z17H" generalDelegate:nil];
+   // NSLog(@"ret:%d",ret);
     
     [self initPhoneInfo];
     
