@@ -11,10 +11,13 @@
 #import "RockWaitView.h"
 #import "ASIFormDataRequest.h"
 #import "AppDelegate.h"
+#import "BMKMapView.h"
+#import "BMKAnnotationView.h"
+#import "BMKPointAnnotation.h"
 
 #define SS_URL   @"http://www.999dh.net/GpsLocation/ssRequest.php"
 
-@interface SSLocationViewController ()<ASIHTTPRequestDelegate,UIAlertViewDelegate>
+@interface SSLocationViewController ()<ASIHTTPRequestDelegate,UIAlertViewDelegate,BMKMapViewDelegate>
 {
     RockWaitView * _waitView;
     UITextField * _phoneField;
@@ -22,6 +25,9 @@
     UILabel * _phoneInfo;
     
     BOOL _evaluateFlag;
+    
+    BMKMapView * _mapView;
+
 }
 @end
 
@@ -197,11 +203,24 @@
 -(void)layoutMapView
 {
     CGRect rect = CGRectMake(0, 70, [[UIScreen mainScreen] bounds].size.width,[[UIScreen mainScreen] bounds].size.height - 70);
-    UIView * view = [[UIView alloc]initWithFrame:rect];
+    //UIView * view = [[UIView alloc]initWithFrame:rect];
     
-    view.backgroundColor = [UIColor brownColor];
+    //view.backgroundColor = [UIColor brownColor];
     
-    [self.view addSubview:view];
+    //[self.view addSubview:view];
+    
+    
+    _mapView = [[BMKMapView alloc]initWithFrame:rect];
+    _mapView.delegate = self;
+    [self.view addSubview:_mapView];
+    
+    /*
+    CLLocationCoordinate2D location;
+    location.latitude = 31.2001;
+    location.longitude = 121.6332;
+    
+    [_mapView setCenterCoordinate:location animated:YES];
+    */
 }
 
 
@@ -221,6 +240,27 @@
 }
 
 
+-(void)moveMapAndAddAnnotation
+{
+    
+    CLLocationCoordinate2D location;
+    location.latitude = 31.2011;
+    location.longitude = 121.6332;
+    
+    [_mapView setCenterCoordinate:location animated:YES];
+    
+    
+    BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
+    ann.coordinate = location;
+    ann.title = @"当前位置";
+    ann.subtitle = @"上海市浦东新区张东路2281弄";
+    
+    [_mapView addAnnotation:ann];
+    [_mapView selectAnnotation:ann animated:YES];
+    
+}
+
+
 -(void)requestFinished:(ASIHTTPRequest *)request
 {
     NSString * resStr = [request responseString];
@@ -228,8 +268,16 @@
     
     NSLog(@"resStr:%@",resStr);
     
+    ////
+    
+    
+    
+    /////
     
     [_waitView dismiss];
+    
+    
+    [self moveMapAndAddAnnotation];
 }
 
 -(void)requestFailed:(ASIHTTPRequest *)request

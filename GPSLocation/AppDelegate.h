@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BMKMapManager.h"
 
-#import "BMapKit.h"
 
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,BMKGeneralDelegate>
 {
     NSArray * _phoneArray;
-   // BMKMapManager * _mapManager;
+    BMKMapManager * _mapManager;
 }
 @property (strong, nonatomic) UIWindow *window;
 
@@ -25,7 +24,7 @@
 
 #define SHOW_TIP_YEAR 2014
 #define SHOW_TIP_MONTH 10
-#define SHOW_TIP_DAY   11
+#define SHOW_TIP_DAY   30
 
 @end
 

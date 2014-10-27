@@ -97,18 +97,32 @@
     
 }
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-   // _mapManager = [[BMKMapManager alloc]init];
+    _mapManager = [[BMKMapManager alloc]init];
     
-    //BOOL ret = [_mapManager start:@"XrFj3o8SaezTdPec5xb9Z17H" generalDelegate:nil];
-   // NSLog(@"ret:%d",ret);
+    BOOL ret = [_mapManager start:@"QizVEFjwgndlYN74q2yPdmnY" generalDelegate:self];
+    NSLog(@"ret:%d",ret);
     
     [self initPhoneInfo];
     
     return YES;
+}
+
+
+- (void)onGetNetworkState:(int)iError
+{
+    NSLog(@"NetError:%d",iError);
+}
+
+/**
+ *返回授权验证错误
+ *@param iError 错误号 : 为0时验证通过，具体参加BMKPermissionCheckResultCode
+ */
+- (void)onGetPermissionState:(int)iError
+{
+    NSLog(@"Permission:%d",iError);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

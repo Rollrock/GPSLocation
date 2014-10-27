@@ -37,6 +37,7 @@
 {
 
     RockWaitView * _waitView;
+    UIAlertView * _alterView;
     
     int _timeInterval;
 
@@ -421,9 +422,10 @@
     NSData * data = [request responseData];
     
     NSLog(@"resStr:%@",resStr);
-    
 
     [_waitView dismiss];
+    
+    [self successPop];
 }
 
 -(void)requestFailed:(ASIHTTPRequest *)request
@@ -433,6 +435,22 @@
     NSLog(@"error:%@",error);
     
     [_waitView dismiss];
+}
+
+-(void)successPop
+{
+    _alterView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"设置成功,数据将在启动时生效！" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    [_alterView show];
+
+    [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(dismissAlter) userInfo:nil repeats:NO];
+}
+
+-(void)dismissAlter
+{
+    [_alterView dismissWithClickedButtonIndex:0 animated:YES];
+    _alterView = nil;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
