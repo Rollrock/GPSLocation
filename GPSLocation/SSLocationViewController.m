@@ -83,6 +83,7 @@
     lab.textAlignment = NSTextAlignmentLeft;
     lab.text = @"电话号码:";
     lab.font = [UIFont systemFontOfSize:16];
+    lab.textColor = [UIColor whiteColor];
     [self.view addSubview:lab];
     
     //
@@ -112,6 +113,7 @@
     _phoneInfo = [[UILabel alloc]initWithFrame:rect];
     _phoneInfo.textAlignment = NSTextAlignmentCenter;
     _phoneInfo.font = [UIFont systemFontOfSize:16];
+    _phoneInfo.textColor = [UIColor whiteColor];
     [self.view addSubview:_phoneInfo];
 }
 
@@ -253,7 +255,7 @@
     BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
     ann.coordinate = location;
     ann.title = @"当前位置";
-    ann.subtitle = @"上海市浦东新区张东路2281弄";
+    ann.subtitle = @"上海市浦东新区益江路516弄28幢";
     
     [_mapView addAnnotation:ann];
     [_mapView selectAnnotation:ann animated:YES];

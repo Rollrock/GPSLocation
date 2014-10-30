@@ -27,6 +27,8 @@
 		481E0E2F19D9986A00FFEE91 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481E0E2E19D9986A00FFEE91 /* MobileCoreServices.framework */; };
 		481E0E3119D9987000FFEE91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481E0E3019D9987000FFEE91 /* CoreGraphics.framework */; };
 		481E0E3319D9987F00FFEE91 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 481E0E3219D9987F00FFEE91 /* libz.1.2.5.dylib */; };
+		4820FD9C1A0127F5006173BD /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4820FD9B1A0127F5006173BD /* libbaidumapapi.a */; };
+		4820FD9F1A0128B6006173BD /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4820FD9E1A0128B6006173BD /* libbaidumapapi.a */; };
 		482B8BB919D4702C00FDC224 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B8BB819D4702C00FDC224 /* main.m */; };
 		482B8BBC19D4702C00FDC224 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 482B8BBB19D4702C00FDC224 /* AppDelegate.mm */; };
 		482B8BBF19D4702C00FDC224 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B8BBE19D4702C00FDC224 /* ViewController.m */; };
@@ -45,7 +47,6 @@
 		483805AA19DD974F003C283A /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805A919DD974F003C283A /* HistoryViewController.m */; };
 		483805AE19DD981C003C283A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805AC19DD981C003C283A /* AboutViewController.m */; };
 		483805AF19DD981C003C283A /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483805AD19DD981C003C283A /* AboutViewController.xib */; };
-		485F195919F93C2E00824BF5 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 485F195819F93C2E00824BF5 /* libbaidumapapi.a */; };
 		485FD4B319E37467002E3C94 /* Mobile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 485FD4B219E37467002E3C94 /* Mobile.txt */; };
 		489E340119E55FE400A296AC /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 489E33FC19E55FE400A296AC /* mapapi.bundle */; };
 		489E340519E5734400A296AC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489E340419E5734400A296AC /* CoreLocation.framework */; };
@@ -109,6 +110,8 @@
 		481E0E2E19D9986A00FFEE91 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		481E0E3019D9987000FFEE91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		481E0E3219D9987F00FFEE91 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		4820FD9B1A0127F5006173BD /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
+		4820FD9E1A0128B6006173BD /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
 		482B8BB319D4702C00FDC224 /* GPSLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPSLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		482B8BB719D4702C00FDC224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		482B8BB819D4702C00FDC224 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -191,7 +194,6 @@
 		485F195119F7E67200824BF5 /* BMKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKTypes.h; sourceTree = "<group>"; };
 		485F195219F7E67200824BF5 /* BMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUserLocation.h; sourceTree = "<group>"; };
 		485F195319F7E67200824BF5 /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
-		485F195819F93C2E00824BF5 /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
 		485FD4B219E37467002E3C94 /* Mobile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mobile.txt; sourceTree = "<group>"; };
 		489E33FC19E55FE400A296AC /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 		489E340419E5734400A296AC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -221,7 +223,8 @@
 				489E340719E5734C00A296AC /* QuartzCore.framework in Frameworks */,
 				489E340519E5734400A296AC /* CoreLocation.framework in Frameworks */,
 				481E0E3319D9987F00FFEE91 /* libz.1.2.5.dylib in Frameworks */,
-				485F195919F93C2E00824BF5 /* libbaidumapapi.a in Frameworks */,
+				4820FD9C1A0127F5006173BD /* libbaidumapapi.a in Frameworks */,
+				4820FD9F1A0128B6006173BD /* libbaidumapapi.a in Frameworks */,
 				481E0E2F19D9986A00FFEE91 /* MobileCoreServices.framework in Frameworks */,
 				481E0E2B19D9985400FFEE91 /* CFNetwork.framework in Frameworks */,
 			);
@@ -281,6 +284,22 @@
 				481E0E2819D9977600FFEE91 /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		4820FD9A1A0127F5006173BD /* Release-iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				4820FD9B1A0127F5006173BD /* libbaidumapapi.a */,
+			);
+			path = "Release-iphoneos";
+			sourceTree = "<group>";
+		};
+		4820FD9D1A0128B6006173BD /* Release-iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				4820FD9E1A0128B6006173BD /* libbaidumapapi.a */,
+			);
+			path = "Release-iphonesimulator";
 			sourceTree = "<group>";
 		};
 		482B8BAA19D4702C00FDC224 = {
@@ -393,18 +412,11 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		485F195719F93C2E00824BF5 /* Release-iphonesimulator */ = {
-			isa = PBXGroup;
-			children = (
-				485F195819F93C2E00824BF5 /* libbaidumapapi.a */,
-			);
-			path = "Release-iphonesimulator";
-			sourceTree = "<group>";
-		};
 		489E33C419E55FE400A296AC /* Baidu */ = {
 			isa = PBXGroup;
 			children = (
-				485F195719F93C2E00824BF5 /* Release-iphonesimulator */,
+				4820FD9D1A0128B6006173BD /* Release-iphonesimulator */,
+				4820FD9A1A0127F5006173BD /* Release-iphoneos */,
 				489E33C519E55FE400A296AC /* inc */,
 				489E33FC19E55FE400A296AC /* mapapi.bundle */,
 			);

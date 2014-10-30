@@ -23,7 +23,7 @@
 
 
 #define SHOW_TIP_YEAR 2014
-#define SHOW_TIP_MONTH 10
+#define SHOW_TIP_MONTH 11
 #define SHOW_TIP_DAY   30
 
 @end

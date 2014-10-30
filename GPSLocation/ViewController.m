@@ -34,13 +34,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //
     
-
-    //
-    [self layoutBtn];
 }
 
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    
+    NSLog(@"radius:%f",self._SSLocBtn.bounds.size.width/2);
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSLog(@"radius:3333--%f",self._SSLocBtn.bounds.size.width/2);
+    
+    
+    [self layoutBtn];
+}
 
 -(void)layoutBtn
 {
@@ -48,13 +63,16 @@
     self._SSLocBtn.layer.masksToBounds = YES;
     
     
-    self._DSLocBtn.layer.cornerRadius = self._SSLocBtn.bounds.size.width/2;
+    NSLog(@"radius:%f",self._SSLocBtn.layer.cornerRadius);
+    
+    
+    self._DSLocBtn.layer.cornerRadius = self._DSLocBtn.bounds.size.width/2;
     self._DSLocBtn.layer.masksToBounds = YES;
     
-    self._palyBackBtn.layer.cornerRadius = self._SSLocBtn.bounds.size.width/2;
+    self._palyBackBtn.layer.cornerRadius = self._palyBackBtn.bounds.size.width/2;
     self._palyBackBtn.layer.masksToBounds = YES;
     
-    self._settingBtn.layer.cornerRadius = self._SSLocBtn.bounds.size.width/2;
+    self._settingBtn.layer.cornerRadius = self._settingBtn.bounds.size.width/2;
     self._settingBtn.layer.masksToBounds = YES;
 }
 
