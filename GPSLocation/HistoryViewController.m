@@ -44,26 +44,11 @@
     CLLocationCoordinate2D coors[5] = {0};
 
     {
-        location.latitude = 31.2011;
-        location.longitude = 121.6332;
+        location.latitude = 31.2444;
+        location.longitude = 121.490;
         
-        coors[0].latitude = 31.2011;
-        coors[0].longitude = 121.6332;
-        
-        BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
-        ann.coordinate = location;
-        ann.title = @"2014.10.22-22:45";
-        ann.subtitle = @"上海市浦东新区张东路2281弄";
-        
-        [_array addObject:ann];
-    }
-    
-    {
-        location.latitude = 31.2061;
-        location.longitude = 121.6432;
-        
-        coors[1].latitude = 31.2061;
-        coors[1].longitude = 121.6432;
+        coors[0].latitude = 31.2444;
+        coors[0].longitude = 121.490;
         
         BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
         ann.coordinate = location;
@@ -74,26 +59,11 @@
     }
     
     {
-        location.latitude = 31.2081;
-        location.longitude = 121.6382;
+        location.latitude = 31.2410;
+        location.longitude = 121.4899;
         
-        coors[2].latitude = 31.2081;
-        coors[2].longitude = 121.6382;
-        
-        BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
-        ann.coordinate = location;
-        ann.title = @"2014.10.22-22:45";
-        ann.subtitle = @"上海市浦东新区张东路2281弄";
-        
-        [_array addObject:ann];
-    }
-    
-    {
-        location.latitude = 31.2101;
-        location.longitude = 121.6432;
-        
-        coors[3].latitude = 31.2101;
-        coors[3].longitude = 121.6432;
+        coors[1].latitude = 31.2410;
+        coors[1].longitude = 121.4899;
         
         BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
         ann.coordinate = location;
@@ -104,16 +74,46 @@
     }
     
     {
-        location.latitude = 31.2121;
-        location.longitude = 121.6422;
+        location.latitude = 31.2407;
+        location.longitude = 121.4893;
         
-        coors[4].latitude = 31.2121;
-        coors[4].longitude = 121.6422;
+        coors[2].latitude = 31.2407;
+        coors[2].longitude = 121.4893;
         
         BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
         ann.coordinate = location;
         ann.title = @"2014.10.22-22:45";
         ann.subtitle = @"上海市浦东新区张东路2281弄";
+        
+        [_array addObject:ann];
+    }
+    
+    {
+        location.latitude = 31.2395;
+        location.longitude = 121.4904;
+        
+        coors[3].latitude = 31.2395;
+        coors[3].longitude = 121.4904;
+        
+        BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
+        ann.coordinate = location;
+        ann.title = @"2014.10.22-22:45";
+        ann.subtitle = @"上海市浦东新区张东路2281弄";
+        
+        [_array addObject:ann];
+    }
+    
+    {
+        location.latitude = 31.2404;
+        location.longitude = 121.4908;
+        
+        coors[4].latitude = 31.2404;
+        coors[4].longitude = 121.4908;
+        
+        BMKPointAnnotation *ann = [[BMKPointAnnotation alloc]init];
+        ann.coordinate = location;
+        ann.title = @"2014.11.02-22:45";
+        ann.subtitle = @"上海黄浦区福州路318号";
         
         [_array addObject:ann];
     }

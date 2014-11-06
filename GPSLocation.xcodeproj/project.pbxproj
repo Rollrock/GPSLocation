@@ -36,17 +36,16 @@
 		482B8BC419D4702D00FDC224 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BC319D4702D00FDC224 /* Images.xcassets */; };
 		482B8BC719D4702D00FDC224 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BC519D4702D00FDC224 /* LaunchScreen.xib */; };
 		482B8BD319D4702D00FDC224 /* GPSLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B8BD219D4702D00FDC224 /* GPSLocationTests.m */; };
-		482B8BE319D4717600FDC224 /* round_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BDE19D4717600FDC224 /* round_1.png */; };
-		482B8BE419D4717600FDC224 /* round_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BDF19D4717600FDC224 /* round_2.png */; };
-		482B8BE519D4717600FDC224 /* round_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BE019D4717600FDC224 /* round_3.png */; };
-		482B8BE619D4717600FDC224 /* round_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BE119D4717600FDC224 /* round_4.png */; };
-		482B8BE719D4717600FDC224 /* round_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 482B8BE219D4717600FDC224 /* round_5.png */; };
 		4838059F19DCF301003C283A /* RockWaitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4838059E19DCF301003C283A /* RockWaitView.m */; };
 		483805A619DD8C52003C283A /* DSHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805A419DD8C52003C283A /* DSHistoryViewController.m */; };
 		483805A719DD8C52003C283A /* DSHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483805A519DD8C52003C283A /* DSHistoryViewController.xib */; };
 		483805AA19DD974F003C283A /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805A919DD974F003C283A /* HistoryViewController.m */; };
 		483805AE19DD981C003C283A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483805AC19DD981C003C283A /* AboutViewController.m */; };
 		483805AF19DD981C003C283A /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483805AD19DD981C003C283A /* AboutViewController.xib */; };
+		483E56CD1A0BAA53003CE1AB /* ds_his.png in Resources */ = {isa = PBXBuildFile; fileRef = 483E56C91A0BAA53003CE1AB /* ds_his.png */; };
+		483E56CE1A0BAA53003CE1AB /* ds_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 483E56CA1A0BAA53003CE1AB /* ds_setting.png */; };
+		483E56CF1A0BAA53003CE1AB /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 483E56CB1A0BAA53003CE1AB /* setting.png */; };
+		483E56D01A0BAA53003CE1AB /* ss_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 483E56CC1A0BAA53003CE1AB /* ss_location.png */; };
 		485FD4B319E37467002E3C94 /* Mobile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 485FD4B219E37467002E3C94 /* Mobile.txt */; };
 		489E340119E55FE400A296AC /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 489E33FC19E55FE400A296AC /* mapapi.bundle */; };
 		489E340519E5734400A296AC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489E340419E5734400A296AC /* CoreLocation.framework */; };
@@ -125,11 +124,6 @@
 		482B8BCC19D4702D00FDC224 /* GPSLocationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPSLocationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		482B8BD119D4702D00FDC224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		482B8BD219D4702D00FDC224 /* GPSLocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPSLocationTests.m; sourceTree = "<group>"; };
-		482B8BDE19D4717600FDC224 /* round_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_1.png; sourceTree = "<group>"; };
-		482B8BDF19D4717600FDC224 /* round_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_2.png; sourceTree = "<group>"; };
-		482B8BE019D4717600FDC224 /* round_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_3.png; sourceTree = "<group>"; };
-		482B8BE119D4717600FDC224 /* round_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_4.png; sourceTree = "<group>"; };
-		482B8BE219D4717600FDC224 /* round_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_5.png; sourceTree = "<group>"; };
 		4838059D19DCF301003C283A /* RockWaitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockWaitView.h; sourceTree = "<group>"; };
 		4838059E19DCF301003C283A /* RockWaitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RockWaitView.m; sourceTree = "<group>"; };
 		483805A319DD8C52003C283A /* DSHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHistoryViewController.h; sourceTree = "<group>"; };
@@ -140,6 +134,10 @@
 		483805AB19DD981C003C283A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		483805AC19DD981C003C283A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		483805AD19DD981C003C283A /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		483E56C91A0BAA53003CE1AB /* ds_his.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ds_his.png; sourceTree = "<group>"; };
+		483E56CA1A0BAA53003CE1AB /* ds_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ds_setting.png; sourceTree = "<group>"; };
+		483E56CB1A0BAA53003CE1AB /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		483E56CC1A0BAA53003CE1AB /* ss_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss_location.png; sourceTree = "<group>"; };
 		485F191E19F7E67200824BF5 /* BMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapKit.h; sourceTree = "<group>"; };
 		485F191F19F7E67200824BF5 /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKActionPaopaoView.h; sourceTree = "<group>"; };
 		485F192019F7E67200824BF5 /* BMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotation.h; sourceTree = "<group>"; };
@@ -399,15 +397,14 @@
 		482B8BDD19D4717600FDC224 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				483E56C91A0BAA53003CE1AB /* ds_his.png */,
+				483E56CA1A0BAA53003CE1AB /* ds_setting.png */,
+				483E56CB1A0BAA53003CE1AB /* setting.png */,
+				483E56CC1A0BAA53003CE1AB /* ss_location.png */,
 				489E342419E57DD300A296AC /* icon */,
 				481E0D8319D9864900FFEE91 /* day_select.png */,
 				481E0D8419D9864900FFEE91 /* day_un_select.png */,
 				481E0D8119D841C900FFEE91 /* back.png */,
-				482B8BDE19D4717600FDC224 /* round_1.png */,
-				482B8BDF19D4717600FDC224 /* round_2.png */,
-				482B8BE019D4717600FDC224 /* round_3.png */,
-				482B8BE119D4717600FDC224 /* round_4.png */,
-				482B8BE219D4717600FDC224 /* round_5.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -581,28 +578,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483E56D01A0BAA53003CE1AB /* ss_location.png in Resources */,
 				483805A719DD8C52003C283A /* DSHistoryViewController.xib in Resources */,
 				489E344119E6B53800A296AC /* 58.png in Resources */,
 				482B8BC219D4702D00FDC224 /* Main.storyboard in Resources */,
 				489E344619E6B53800A296AC /* 256.png in Resources */,
 				482B8BC719D4702D00FDC224 /* LaunchScreen.xib in Resources */,
 				481E0D8519D9864900FFEE91 /* day_select.png in Resources */,
-				482B8BE719D4717600FDC224 /* round_5.png in Resources */,
-				482B8BE419D4717600FDC224 /* round_2.png in Resources */,
 				485FD4B319E37467002E3C94 /* Mobile.txt in Resources */,
+				483E56CE1A0BAA53003CE1AB /* ds_setting.png in Resources */,
 				489E344219E6B53800A296AC /* 87.png in Resources */,
 				489E344A19E6B93000A296AC /* 80.png in Resources */,
+				483E56CD1A0BAA53003CE1AB /* ds_his.png in Resources */,
 				489E344519E6B53800A296AC /* 180.png in Resources */,
 				489E344419E6B53800A296AC /* 128.png in Resources */,
-				482B8BE319D4717600FDC224 /* round_1.png in Resources */,
-				482B8BE619D4717600FDC224 /* round_4.png in Resources */,
 				483805AF19DD981C003C283A /* AboutViewController.xib in Resources */,
 				481E0D8219D841C900FFEE91 /* back.png in Resources */,
 				481E0D8019D83F2E00FFEE91 /* DSLocationViewController.xib in Resources */,
-				482B8BE519D4717600FDC224 /* round_3.png in Resources */,
 				489E344819E6B53800A296AC /* 1024.png in Resources */,
 				489E344719E6B53800A296AC /* 512.png in Resources */,
 				489E340119E55FE400A296AC /* mapapi.bundle in Resources */,
+				483E56CF1A0BAA53003CE1AB /* setting.png in Resources */,
 				482B8BC419D4702D00FDC224 /* Images.xcassets in Resources */,
 				481E0D8619D9864900FFEE91 /* day_un_select.png in Resources */,
 				489E344319E6B53800A296AC /* 120.png in Resources */,
@@ -765,6 +761,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GPSLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../libs/Release$(EFFECTIVE_PLATFORM_NAME)",
@@ -783,6 +780,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GPSLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../libs/Release$(EFFECTIVE_PLATFORM_NAME)",

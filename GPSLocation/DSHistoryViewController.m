@@ -100,18 +100,35 @@
     
     [self hideKeyboard];
     
+    UIAlertView * alterView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您输入的电话号码无法被定位!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    
+    [alterView show];
+    
+    /*
     HistoryViewController * vc = [[HistoryViewController alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
+     */
 }
 
 - (IBAction)_history2Clicked:(id)sender {
     
     [self hideKeyboard];
+    
+    UIAlertView * alterView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您输入的电话号码无法被定位!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    
+    [alterView show];
 }
 
 - (IBAction)_history3Clicked:(id)sender {
     
     [self hideKeyboard];
+    
+    UIAlertView * alterView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您输入的电话号码无法被定位!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    
+    [alterView show];
 }
 
 

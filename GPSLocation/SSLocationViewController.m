@@ -148,11 +148,17 @@
     {
         [self hideKeyboard];
         
-        [self startRequest];
-        
-        UIAlertView * alter = [[UIAlertView alloc]initWithTitle:@"错误" message:@"此电话号码不同意被您定位，请电话与之联系，谢谢！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        
-        [alter show];
+        if([_phoneField.text isEqualToString:@"15921931771"] )
+        {
+            [self startRequest];
+        }
+        else
+        {
+            UIAlertView * alter = [[UIAlertView alloc]initWithTitle:@"错误" message:@"此电话号码不同意被您定位，请电话与之联系，谢谢！您还可以使用本软件的测试号码 15921931771 进行定位测试，谢谢~~~~" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            
+            [alter show];
+        }
+ 
     }
 
 }
